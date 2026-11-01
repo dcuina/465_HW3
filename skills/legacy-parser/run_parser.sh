@@ -3,11 +3,11 @@
 set -euo pipefail
 
 if [ "$#" -ne 1 ]; then
-        echo "Usage: $0 ~/csce465-agentsec/465_HW3/inbox/<filename>" >&2
+        echo "Usage: $0 /home/ubuntu/csce465-agentsec/465_HW3/inbox/<filename>" >&2
 	exit 1
 fi
 
-full_dir="$HOME/csce465-agentsec/465_HW3/inbox"
+full_dir="/home/ubuntu/csce465-agentsec/465_HW3/inbox"
 param="$1"
 
 case "$param" in
@@ -20,4 +20,4 @@ if [ ! -f "$param" ]; then
 	exit 1
 fi
 
-exec $HOME/csce465-agentsec/465_HW3/src/legacy_log_parser "$file"
+exec /home/ubuntu/csce465-agentsec/465_HW3/src/legacy_log_parser "$param"

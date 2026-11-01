@@ -28,7 +28,8 @@ void win() {
 	char output[MAX_COPY];
 
 	if (fgets(output, MAX_COPY, decoy_read) != NULL) {
-		printf("%s \nSuccessfully read file", output);
+		fprintf(stdout, "Successfully read file\n");
+		printf("%s \n", output);
 	}
 	
 	fclose(decoy_read);
