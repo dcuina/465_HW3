@@ -41,7 +41,7 @@
  * matches the layout used by the rest of this submission.
  */
 #ifndef INBOX_DIR
-#define INBOX_DIR "/home/ubuntu/csce465-agentsec/465_HW3/inbox/"
+#define INBOX_DIR "/home/pradeep/csce465-agentsec/465_HW3/inbox/"
 #endif
 
 /*

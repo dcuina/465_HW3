@@ -17,7 +17,7 @@ set -u
 
 HW3_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 BIN="${BIN:-$HW3_DIR/src/legacy_log_parser_fixed}"
-INBOX="${INBOX:-/home/ubuntu/csce465-agentsec/465_HW3/inbox}"
+INBOX="${INBOX:-/home/pradeep/csce465-agentsec/465_HW3/inbox}"
 MARKER="$HW3_DIR/markers/ret2win.txt"
 
 pass=0; fail=0

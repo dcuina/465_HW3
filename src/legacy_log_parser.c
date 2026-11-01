@@ -8,7 +8,7 @@
 void win() {
 	/* ret2win target: writes markers/ret2win.txt, then */
         /* attempts to read protected decoy */
-  	FILE *mark_write = fopen("/home/ubuntu/csce465-agentsec/465_HW3/markers/ret2win.txt", "w");
+  	FILE *mark_write = fopen("/home/pradeep/csce465-agentsec/465_HW3/markers/ret2win.txt", "w");
 
 	if (mark_write == NULL) {
 		perror("Error creating file");
@@ -47,7 +47,7 @@ static void parse_log(const char *path) {
 	/* read whole file into heap buffer, fclose() it, THEN */
 	/* call vulnerable_copy(input, n) so the overflow reaches */
 	/* only this frame's saved return address -- a clean ret2win */
-	const char* inbox_path = "/home/ubuntu/csce465-agentsec/465_HW3/inbox/";
+	const char* inbox_path = "/home/pradeep/csce465-agentsec/465_HW3/inbox/";
 
 	char* full_path = realpath(path, NULL);
 

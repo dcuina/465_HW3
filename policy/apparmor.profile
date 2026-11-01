@@ -14,21 +14,21 @@
 
 #include <tunables/global>
 
-/home/ubuntu/csce465-agentsec/465_HW3/src/legacy_log_parser {
+/home/pradeep/csce465-agentsec/465_HW3/src/legacy_log_parser {
   #include <abstractions/base>   # ld.so + libc + other read-only start-up files
                                  # (requirement 5: only what's needed to start)
 
   # --- the binary itself: read + memory-map to execute, nothing more ---
-  /home/ubuntu/csce465-agentsec/465_HW3/src/legacy_log_parser    mr,
+  /home/pradeep/csce465-agentsec/465_HW3/src/legacy_log_parser    mr,
 
   # (1) read the payload/log files it parses, under inbox/ only
-  /home/ubuntu/csce465-agentsec/465_HW3/inbox/                   r,
-  /home/ubuntu/csce465-agentsec/465_HW3/inbox/*                  r,
+  /home/pradeep/csce465-agentsec/465_HW3/inbox/                   r,
+  /home/pradeep/csce465-agentsec/465_HW3/inbox/*                  r,
 
   # (2) write ONLY the marker directory (needed so win()/normal runs can
   #     create markers/ret2win.txt) -- no write access anywhere else
-  /home/ubuntu/csce465-agentsec/465_HW3/markers/                 rw,
-  /home/ubuntu/csce465-agentsec/465_HW3/markers/*                rw,
+  /home/pradeep/csce465-agentsec/465_HW3/markers/                 rw,
+  /home/pradeep/csce465-agentsec/465_HW3/markers/*                rw,
 
   # (3) explicitly deny the protected decoy, and log every attempt.
   #     This is what stops the exploit's payoff: win() reaches fopen() of

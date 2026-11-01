@@ -1,0 +1,10 @@
+src/legacy_log_parser
+src/legacy_log_parser_fixed
+inbox/log.bin
+inbox/pattern.bin
+inbox/exact.bin
+inbox/over.bin
+inbox/short.bin
+markers/ret2win.txt
+core
+*.o
